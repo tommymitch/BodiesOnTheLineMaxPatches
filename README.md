@@ -7,7 +7,7 @@ Every sound is synthesised in real time: no samples are used. Each patch has its
 Each patch comes in two versions:
 
 - **Standalone Max patch:** `Procedural_*.maxpat` in each folder.
-- **Max for Live instrument:** `M4L/Procedural *.amxd` in each folder, for Ableton Live. Every control can be automated, and Breathing and Heartbeat can sync to Live's transport. See [Max for Live devices](#max-for-live-devices).
+- **Max for Live instrument:** `M4L/Procedural *.amxd` in each folder, for Ableton Live. Every control can be automated, and Breathing, Heartbeat and Sea can sync to Live's transport. See [Max for Live devices](#max-for-live-devices).
 
 ## Patches
 
@@ -18,6 +18,7 @@ Each patch comes in two versions:
 | `Fire/` | `Procedural_Fire.maxpat` | Fire: roar, hiss, crackles, wood pops, ember fizz, and logs settling | **Size** (candle → bonfire), **Draught** |
 | `Breathing/` | `Procedural_Breathing.maxpat` | Human breathing through nose or mouth, with optional voicing, rasp and wheeze | **Exertion** (calm → panting), plus a manual **Lungs** input |
 | `Heartbeat/` | `Procedural_Heartbeat.maxpat` | A heartbeat: lub-dub valve sounds, gallop, murmur and pulse, from clinical stethoscope to deep film-score thump | **Rate** (40–200 BPM), **Weight**, plus presets. `previews/` has example recordings |
+| `Sea/` | `Procedural_Sea.maxpat` | Waves lapping on a beach: the break, the rush up the shore, sand fizzing as the water soaks in, pebbles rattling in the backwash, and a distant surf bed | **Beach** (sand → pebble), **Wave Length** (½–8 bars), **Sync** to the transport. `previews/` has example recordings |
 
 ## Using them
 
@@ -67,6 +68,14 @@ Rain, Wind, Fire and Heartbeat use `poly~` voice files, which sit next to the de
 
 - **Sync** locks the heartbeat to Live's tempo, with the lub on the beat.
 - **Speed** sets ½×, 1× or 2× the tempo.
+
+### Sea: sync
+
+- **Wave Length** sets one wave per ½, 1, 2, 4 or 8 bars (4/4).
+- With **Sync** on and Live playing, the waves lock to the song position, so each wave breaks at the same point on the bar grid. Jumping around the arrangement stays in sync.
+- While Live is stopped, or with Sync off, the waves keep going at Live's tempo.
+- **Looseness** makes the waves irregular. Each wave starts late by a random amount, up to about a third of a wave. With Sync on, the waves still follow the bar grid. With Sync off or Live stopped, each wave's length also varies by up to ±30%. At 0, every wave is exactly on time.
+- The Sea device needs no voice files, so it doesn't need freezing.
 
 ### Sync behaviour (Breathing and Heartbeat)
 

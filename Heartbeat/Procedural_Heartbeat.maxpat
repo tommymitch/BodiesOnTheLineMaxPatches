@@ -3686,7 +3686,7 @@
        {
         "box": {
          "maxclass": "newobj",
-         "text": "expr min((150.+100.*$f2)*(0.8+0.4*$f3)*(0.9+$i1/5000.), 0.9*$f4)",
+         "text": "expr min((150.+100.*$f2)*(0.8+0.4*$f3)*(0.9+$i1/5000.)\\, 0.9*$f4)",
          "numinlets": 4,
          "numoutlets": 1,
          "patching_rect": [
